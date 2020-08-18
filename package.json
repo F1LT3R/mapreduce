@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "@f1lt3r/mapreduce",
+  "version": "0.1.0-alpha",
+  "description": "distributed mapreduce",
+  "bin": {
+    "mapreduce": "bin/cli.mjs"
+  }
+}
