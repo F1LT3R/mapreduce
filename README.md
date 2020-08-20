@@ -286,7 +286,7 @@ const messages = [
         server: {
           WORK_FINISHED: ({ workerPID, job }) => ({ workerPID, job }),
           // The Worker responds to the Server with a finished job. The Server
-          // shifts the result onto the resultsStack. asd
+          // shifts the result onto the resultsStack.
         },
       },
     },
