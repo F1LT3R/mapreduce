@@ -268,6 +268,18 @@ const messages = [
   },
 
   {
+    client: {
+      to: {
+        server: {
+          NO_MORE_LINES: ({ clientId }) => ({ clientId }),
+          // The Client will notify the Server it has finished sending all the
+          // lines. The Server will no longer REQUEST_WORK from this Client.
+        },
+      },
+    },
+  },
+
+  {
     server: {
       to: {
         worker: {
@@ -366,19 +378,6 @@ const messages = [
           NAN_ERROR: ({ serverId }) => ({ serverId }),
           // The Server will notify the Client that the error was encountered.
           // The Client will quit.
-        },
-      },
-    },
-  },
-
-  // EDGE CASE: CLIENT SENT ALL LINES
-  {
-    client: {
-      to: {
-        server: {
-          NO_MORE_LINES: ({ clientId }) => ({ clientId }),
-          // The Client will notify the Server it has finished sending all the
-          // lines. The Server will no longer REQUEST_WORK from this Client.
         },
       },
     },
